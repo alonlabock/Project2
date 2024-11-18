@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #1b1b1b; /* Dark background for contrast */
+    color: white;
+}
+
+canvas {
+    display: block;
+}
+
+.controls {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    padding: 15px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+    color: #f0f0f0; /* Light font color */
+    transition: background 0.3s ease; /* Smooth hover effect */
+    width: 200px; /* Smaller width */
+    font-size: 0.9em; /* Slightly smaller font */
+}
+
+.controls:hover {
+    background: rgba(255, 255, 255, 0.2); /* Brighter on hover */
+}
+
+.controls input,
+.controls select {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px; /* Reduce bottom margin */
+    padding: 8px;
+    border: none;
+    border-radius: 8px; /* Rounded input elements */
+    background-color: #2c2c2c; /* Dark background for inputs */
+    color: #fff; /* White text */
+    font-size: 1em;
+    outline: none; /* Remove outline */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.controls input:hover,
+.controls select:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+}
+
+.controls input[type="range"] {
+    background: #565656; /* Track color */
+    -webkit-appearance: none;
+}
+
+.controls input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 12px;
+    width: 12px;
+    background: #00ff99; /* Thumb color */
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.shape-selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shape-selector label {
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.shape-selector select {
+    cursor: pointer;
+    background-color: #4a4a4a;
+    color: #fff;
+    border: 2px solid #00ff99; /* Highlight border */
+    padding: 6px;
+    border-radius: 8px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.shape-selector select:hover {
+    border-color: #00cc66; /* Darker green on hover */
+}
+
+.shape-selector select option {
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+.controls input[type="color"] {
+    cursor: pointer;
+}
